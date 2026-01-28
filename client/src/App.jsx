@@ -9,6 +9,10 @@ import Landing from "./pages/Landing";
 import{useContext} from 'react';
 import Dashboard from './pages/Dashboard.jsx';
 import Register from "./pages/Register";
+import axios from "axios";
+
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+axios.defaults.withCredentials = true;
 function App() {
   return (
     <Router>
